@@ -1,27 +1,71 @@
-# ProyectMeaowth
+## ProyectMeaowth
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+Tenéis que crear una SPA con varias 'páginas' en Angular, gestionando el estado común con un servicio con Observables. Usaremos scss o css y la app debe ser responsive (mobile + desktop) / mobile first.
 
-## Development server
+Mínimo de páginas (vistas):
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Lista API pública,
 
-## Code scaffolding
+Lista API privada
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Detail
 
-## Build
+Crear ítem
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Modificar ítem
 
-## Running unit tests
+Página no encontrada
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Se tiene que cargar mediante lazy loading.
 
-## Running end-to-end tests
+La app se conectará a una API pública de vuestra elección y listará los elementos. En dicho listado tiene que haber paginación y también un filtro como mínimo. Filtrado en la misma página del listado. Al filtrar, no dirigimos al usuario a otra página, se queda en el listado y el listado cambia.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+A partir de este listado tendréis que crear otro listado conectado a una API privada (API local mediante JSON-server), donde implementaréis CRUD.
 
-## Further help
+La creación y edición de item se hará con el mismo componente formulario reutilizado. La creación y la edición tienen que tener paths distintos en la URL. Cuando el usuario crea o edita, se le tiene que redirigir al listado y dar un feedback del resultado de la operación.
+El botón de borrar tiene que estar en el mismo listado de items. Cuando el usuario borra, no se va a otra página, en el mismo listado en el que está debe desaparecer el ítem. También si queréis puede estar en la página de detalle.
+La interfaz debe dar feedback de cuando se está esperando una response de las APIs, y también debe gestionar los errores de éstas.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Requisitos:
+
+Diseño en Figma
+
+Listado de componentes y responsabilidades
+
+Trello:
+
+Columnas Backlog, ToDo (Day/Sprint), In progress, Testing, Review/Que hice ayer y Done
+Hacer daily:
+
+Qué tareas hice ayer
+Qué stoppers tuve
+Qué tareas haré hoy
+Hooks de git (huskies) y GitHub Actions
+
+SonarCloud, mínimo de un escaneo diario
+
+Mínimo de un approvals para poder mergear PR
+
+Desplegada a Netlify / Vercel
+
+HTML semántico (validado)
+
+CSS (validado)
+
+Testing con coverage. Todos los tipos de tests que hemos visto.
+
+Optimizada (Lighthouse en Netlify / Vercel)
+
+Challenge HollyWeek
+Seleccionar
+API: probarla -> consistencia / rendimiento / no pago
+Diseño en Figma
+Listado de componentes y responsabilidades
+Trello:
+Columnas Backlog, ToDo, In progress, Review/Testing y Done
+Entregamos en Discord:
+
+Nombre y url API
+Link Figma
+Link Trello
+Link Listado componentes
