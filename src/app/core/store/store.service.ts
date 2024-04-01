@@ -17,9 +17,6 @@ export class StoreService {
   loadData( page: number = this.currentPage) {
 
     this.repo.getData(page).subscribe({
-      next: (data) => {this.state.next(data.cards);
+      next: (data) => {this.state.next(data.cards.filter((data) => data.imageUrl));
       this.currentPage = page},
-      error: (dataError) => console.log('Es un error.' + dataError),
-    });
-  }
 }
