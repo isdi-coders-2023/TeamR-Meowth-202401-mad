@@ -1,0 +1,8 @@
+<ul>
+  @for (item of cardData; track item.name) {
+  <li>
+    <app-card [card]="item"></app-card>
+  </li>
+
+  }
+</ul>

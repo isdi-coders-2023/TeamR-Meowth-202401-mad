@@ -9,11 +9,14 @@ import { MagicCard } from '../model/model';
 export class StoreService {
   private state = new BehaviorSubject<MagicCard[]>([]);
   public state$ = this.state.asObservable();
-  constructor(private repo: RepoService) {}
+  constructor(private repo: RepoService) {
+    this.loadData();
+  }
 
   loadData() {
     this.repo.getData().subscribe({
-      next: (data) => this.state.next(data.cards),
+      next: (data) =>
+        this.state.next(data.cards.filter((data) => data.imageUrl)),
       error: (dataError) => console.log('Es un error.' + dataError),
     });
   }
