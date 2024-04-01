@@ -1,0 +1,17 @@
+footer {
+  justify-content: space-between;
+  color: white;
+  background-color: #252525;
+  display: flex;
+  padding-inline: 10rem;
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  address {
+    padding-top: 1.5rem;
+    letter-spacing: 0.25em;
+    word-spacing: 0.25em;
+  }
+}
