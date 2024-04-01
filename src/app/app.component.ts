@@ -5,8 +5,6 @@ import { HomeComponent } from './feature/home/home.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent],
-
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   imports: [RouterOutlet, HomeComponent],
