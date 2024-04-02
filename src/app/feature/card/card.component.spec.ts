@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CardComponent } from './card.component';
+import { MagicCard } from '../../core/model/model';
+import { By } from '@angular/platform-browser';
 
 describe('CardComponent', () => {
   let component: CardComponent;
@@ -18,5 +20,28 @@ describe('CardComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should display a card', () => {
+    const testCard: MagicCard = {
+      name: 'testCard',
+      imageUrl: 'http://www.test.com/',
+      manaCost: '',
+      cmc: 0,
+      colors: [],
+      rarity: '',
+      setName: '',
+      text: '',
+      artist: '',
+      number: '',
+      isFavorite: false,
+      types: [],
+      flavor: '',
+    };
+    component.card = testCard;
+    fixture.detectChanges();
+    const image = fixture.debugElement.query(By.css('li img')).nativeElement;
+    expect(image.src).toEqual(testCard.imageUrl);
+    expect(image.alt).toEqual(testCard.name);
   });
 });
