@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListComponent } from './list.component';
 import { provideHttpClient } from '@angular/common/http';
+import { By } from '@angular/platform-browser';
 
 describe('ListComponent', () => {
   let component: ListComponent;
@@ -20,5 +21,10 @@ describe('ListComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render ul', () => {
+    const list = fixture.debugElement.query(By.css('ul'));
+    expect(list).toBeTruthy();
   });
 });

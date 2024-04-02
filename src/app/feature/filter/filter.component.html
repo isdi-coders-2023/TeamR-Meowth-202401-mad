@@ -1,14 +1,45 @@
 <ul class="filters">
-  <li> <button (click)="changeColor('G')"><img src="../../../assets/filter/green.png" alt="filter by green"></button>
+  <li>
+    <button class="green" (click)="changeColor('G')">
+      <img src="../../../assets/filter/green.png" alt="filter by green" />
+    </button>
   </li>
-  <li><button (click)="changeType('Artifact')"><img src="../../../assets/filter/colorless.png"
-        alt="filter by artifact"></button></li>
-  <li><button (click)="changeColor('R')"><img src="../../../assets/filter/red.png" alt="filter by red"></button></li>
-  <li><button (click)="changeColor('U')"><img src="../../../assets/filter/blue.png" alt="filter by blue"></button></li>
-  <li><button (click)="changeColor('W')"><img src="../../../assets/filter/white.png" alt="filter by white"></button>
+  <li>
+    <button class="artifact" (click)="changeType('Artifact')">
+      <img
+        src="../../../assets/filter/colorless.png"
+        alt="filter by artifact"
+      />
+    </button>
   </li>
-  <li><button (click)="changeColor('B')"><img src="../../../assets/filter/black.png" alt="filter by black"></button>
+  <li>
+    <button class="red" (click)="changeColor('R')">
+      <img src="../../../assets/filter/red.png" alt="filter by red" />
+    </button>
   </li>
-  <li><button (click)="resetFilter()"><img src="../../../assets/filter/reset.svg" alt="reset filter" width="55"
-        height="60"></button></li>
+  <li>
+    <button class="blue" (click)="changeColor('U')">
+      <img src="../../../assets/filter/blue.png" alt="filter by blue" />
+    </button>
+  </li>
+  <li>
+    <button class="white" (click)="changeColor('W')">
+      <img src="../../../assets/filter/white.png" alt="filter by white" />
+    </button>
+  </li>
+  <li>
+    <button class="black" (click)="changeColor('B')">
+      <img src="../../../assets/filter/black.png" alt="filter by black" />
+    </button>
+  </li>
+  <li>
+    <button class="reset" (click)="resetFilter()">
+      <img
+        src="../../../assets/filter/reset.svg"
+        alt="reset filter"
+        width="55"
+        height="60"
+      />
+    </button>
+  </li>
 </ul>
