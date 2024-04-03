@@ -27,17 +27,7 @@ describe('CardComponent', () => {
       name: 'testCard',
       imageUrl: 'http://www.test.com/',
       manaCost: '',
-      cmc: 0,
-      colors: [],
-      rarity: '',
-      setName: '',
-      text: '',
-      artist: '',
-      number: '',
-      isFavorite: false,
-      types: [],
-      flavor: '',
-    };
+    } as MagicCard;
     component.card = testCard;
     fixture.detectChanges();
     const image = fixture.debugElement.query(By.css('li img')).nativeElement;
