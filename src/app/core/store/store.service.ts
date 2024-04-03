@@ -14,26 +14,42 @@ export class StoreService {
   currentPage = 1;
   currentColor = '';
   currentType = '';
+  private usernameForm = new BehaviorSubject<string>('');
+  public usernameForm$ = this.state.asObservable();
+  private isAuthenticated = new BehaviorSubject<boolean>(false);
   constructor(private repo: RepoService) {
     this.loadData();
   }
 
-  loadData( page: number = this.currentPage, color: string = this.currentColor, type: string = this.currentType) {
-
+  loadData(
+    page: number = this.currentPage,
+    color: string = this.currentColor,
+    type: string = this.currentType
+  ) {
     this.repo.getData(page, color, type).subscribe({
-      next: (data) => {this.state.next(data.cards.filter((data) => data.imageUrl));
-      this.currentPage = page
-      this.currentColor = color
-      this.currentType = type},
+      next: (data) => {
+        this.state.next(data.cards.filter((data) => data.imageUrl));
+        this.currentPage = page;
+        this.currentColor = color;
+        this.currentType = type;
+      },
       error: (dataError) => console.log('Es un error.' + dataError),
     });
   }
 
-  selectCard(card:MagicCard) {
+  selectCard(card: MagicCard) {
     this.detailCard.next(card);
   }
 
   getSelectedCard(): Observable<MagicCard> {
-    return this.detailCard$
+    return this.detailCard$;
+  }
+
+  getUsername(username: string) {
+    this.usernameForm.next(username);
+    this.isAuthenticated.next(true);
+  }
+  getisAuthenticated(): Observable<boolean> {
+    return this.isAuthenticated.asObservable();
   }
 }
