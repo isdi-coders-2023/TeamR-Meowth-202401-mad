@@ -17,11 +17,11 @@ export class InitialFormComponent {
     username: new FormControl(),
   });
 
-  displayweb: boolean = false;
+  displayWeb: boolean = false;
   constructor(private store: StoreService) {}
 
   isLogged() {
     this.store.getUsername(this.form.value.username);
-    this.displayweb = true;
+    this.displayWeb = true;
   }
 }

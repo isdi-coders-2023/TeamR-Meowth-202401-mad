@@ -29,7 +29,7 @@ export class AppComponent {
   isAuthenticated: boolean = false;
 
   constructor(private service: StoreService) {
-    this.service.getisAuthenticated().subscribe((isLogged) => {
+    this.service.getIsAuthenticated().subscribe((isLogged) => {
       this.isAuthenticated = isLogged;
     });
   }
