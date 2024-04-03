@@ -4,6 +4,7 @@ import HomeComponent from './feature/home/home.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { MenuComponent } from './shared/menu/menu.component';
+import DetailsComponent from './feature/details/details.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { MenuComponent } from './shared/menu/menu.component';
     FooterComponent,
     HeaderComponent,
     MenuComponent,
+    DetailsComponent
   ],
 })
 export class AppComponent {
