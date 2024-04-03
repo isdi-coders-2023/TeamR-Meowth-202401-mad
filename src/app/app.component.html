@@ -1,1 +1,10 @@
+@if (!isAuthenticated){
+<app-header></app-header>
+<app-initial-form></app-initial-form>
+} @else {
+<app-header>
+  <app-menu />
+</app-header>
 <router-outlet />
+}
+<app-footer></app-footer>
