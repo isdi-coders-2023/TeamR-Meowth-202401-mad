@@ -20,11 +20,7 @@ import { StoreService } from './core/store/store.service';
     FooterComponent,
     HeaderComponent,
     MenuComponent,
-<<<<<<< HEAD
     DetailsComponent,
-=======
-    DetailsComponent
->>>>>>> ee9986f475b237346b6df11a27be504863c4dbfb
     InitialFormComponent,
   ],
 })
