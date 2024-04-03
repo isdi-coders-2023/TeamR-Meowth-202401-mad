@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/internal/Observable';
   providedIn: 'root',
 })
 export class RepoService {
-  urlBase = 'https://api.magicthegathering.io/v1/cards?pageSize=8';
+  urlBase = 'https://api.magicthegathering.io/v1/cards?pageSize=15';
   constructor(private http: HttpClient) {}
   getData(
     page: number = 1,
