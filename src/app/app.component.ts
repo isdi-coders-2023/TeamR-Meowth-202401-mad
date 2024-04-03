@@ -23,6 +23,7 @@ import { StoreService } from './core/store/store.service';
 })
 export class AppComponent {
   title = 'projectMeowth';
+
   isAuthenticated: boolean = false;
 
   constructor(private service: StoreService) {
@@ -31,3 +32,6 @@ export class AppComponent {
     });
   }
 }
+
+}
+
