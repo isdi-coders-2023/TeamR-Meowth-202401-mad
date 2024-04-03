@@ -1,18 +1,25 @@
 section {
   background-image: url(../../../assets/img/background.jpg);
   color: white;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  margin-inline: 10rem;
   margin-block: 5rem;
-  padding-block: 2rem;
-  padding-left: 2rem;
-  form {
-    text-align: left;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
+  padding-block: 4rem;
+  margin-inline: 30rem;
+  padding-top: 2rem;
+}
+form {
+  margin-inline: 3rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  input {
+    width: 97%;
   }
   button {
-    margin-inline: 9rem;
+    margin-inline: 7rem;
+    margin-bottom: 2rem;
   }
 }
