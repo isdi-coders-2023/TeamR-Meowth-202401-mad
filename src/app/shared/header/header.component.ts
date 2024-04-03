@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
+  imports: [MenuComponent],
 })
-export class HeaderComponent {
-
-}
+export class HeaderComponent {}
