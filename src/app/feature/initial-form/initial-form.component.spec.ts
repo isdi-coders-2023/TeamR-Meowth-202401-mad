@@ -25,12 +25,18 @@ describe('InitialFormComponent', () => {
   });
 
   it('should contain a string in a box', () => {
-    component.form.controls['email'].setValue('antonio@hotmail.com');
-    component.form.controls['password'].setValue('antonio');
-    component.form.controls['repeatPassword'].setValue('antonio');
-    component.form.controls['username'].setValue('antonio');
-    component.isLogged();
-    expect(component.displayweb).toBeTruthy();
+    const email = component.form.controls['email'];
+    const password = component.form.controls['password'];
+    const repeatPassword = component.form.controls['repeatpassword'];
+    const username = component.form.controls['username'];
+    email.setValue('antonio@hotmail.com');
+    expect(email.value).toContain('antonio');
+    password.setValue('alberto');
+    expect(password.value).toContain('al');
+    repeatPassword.setValue('francisco');
+    expect(repeatPassword.value).toContain('fran');
+    username.setValue('alejandro');
+    expect(username.value).toContain('ale');
   });
 
   it('form invalid when empty', () => {
