@@ -25,4 +25,16 @@ describe('HeaderComponent', () => {
     const image = fixture.debugElement.query(By.css('img'));
     expect(image).toBeTruthy();
   });
+  it('should have the right dimensions', () => {
+    const image = fixture.debugElement.query(By.css('img')).nativeElement;
+    expect(image.width).toBe(200);
+  });
+  it('should display the right image', () => {
+    const image = fixture.debugElement.query(By.css('img')).nativeElement;
+    expect(image.src).toContain('magiclogo');
+  });
+  it('should have the right alt text', () => {
+    const image = fixture.debugElement.query(By.css('img')).nativeElement;
+    expect(image.alt).toContain('Logo de Magic');
+  });
 });

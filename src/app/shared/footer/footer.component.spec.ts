@@ -45,4 +45,13 @@ describe('FooterComponent', () => {
     expect(facebookLink).toBeTruthy();
     expect(twitterLink).toBeTruthy();
   });
+  it('should render the right icon for every link', () => {
+    const icons = fixture.debugElement.queryAll(By.css('.social-icon'));
+    expect(icons.length).toBe(5);
+    expect(icons[0].nativeElement.src).toContain('github');
+    expect(icons[1].nativeElement.src).toContain('youtube');
+    expect(icons[2].nativeElement.src).toContain('twitch');
+    expect(icons[3].nativeElement.src).toContain('facebook');
+    expect(icons[4].nativeElement.src).toContain('twitter');
+  });
 });

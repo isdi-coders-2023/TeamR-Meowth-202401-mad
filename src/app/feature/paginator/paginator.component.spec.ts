@@ -28,7 +28,20 @@ describe('PaginatorComponent', () => {
   });
 
   it('should call loadData', () => {
+    spyOn(component, 'getPage').and.callThrough();
     fixture.debugElement.query(By.css('button')).triggerEventHandler('click');
+    expect(component.getPage).toHaveBeenCalled();
     expect(mockSrv.loadData).toHaveBeenCalled();
+  });
+
+  it('should update the value of currentPage when clicked', () => {
+    fixture.debugElement.query(By.css('.page-up')).triggerEventHandler('click');
+    expect(component.currentPage).toBe(2);
+  });
+  it('should update the value of currentPage when clicked', () => {
+    fixture.debugElement
+      .query(By.css('.page-down'))
+      .triggerEventHandler('click');
+    expect(component.currentPage).toBe(0);
   });
 });
