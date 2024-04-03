@@ -1,0 +1,30 @@
+<section>
+  <h2>Sign in</h2>
+  <form [formGroup]="form" (ngSubmit)="isLogged()">
+    <span>
+      Email:
+      <input type="email" placeholder="email" formControlName="email" />
+    </span>
+    <span>
+      Password:
+      <input
+        type="password"
+        placeholder="password"
+        formControlName="password"
+      />
+    </span>
+    <span>
+      Repeat password:
+      <input
+        type="password"
+        placeholder="password"
+        formControlName="repeatpassword"
+      />
+    </span>
+    <span>
+      Username:
+      <input type="text" placeholder="Username" formControlName="Username" />
+    </span>
+    <button type="submit">Entry</button>
+  </form>
+</section>
