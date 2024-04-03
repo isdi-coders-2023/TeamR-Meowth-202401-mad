@@ -4,8 +4,10 @@ import HomeComponent from './feature/home/home.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { MenuComponent } from './shared/menu/menu.component';
+import DetailsComponent from './feature/details/details.component';
 import { InitialFormComponent } from './feature/initial-form/initial-form.component';
 import { StoreService } from './core/store/store.service';
+
 
 @Component({
   selector: 'app-root',
@@ -18,6 +20,7 @@ import { StoreService } from './core/store/store.service';
     FooterComponent,
     HeaderComponent,
     MenuComponent,
+    DetailsComponent,
     InitialFormComponent,
   ],
 })

@@ -1,1 +1,12 @@
-
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+section {
+  display: flex;
+  align-items: center;
+  margin: 1rem 10rem;
+}
+ul {
+  list-style: none;
+}

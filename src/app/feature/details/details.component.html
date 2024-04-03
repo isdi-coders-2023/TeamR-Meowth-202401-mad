@@ -1,1 +1,37 @@
-<p>details works!</p>
+<section>
+  <div><img [src]="card.imageUrl" [alt]="card.name" /></div>
+  <div class="details-list">
+    <ul>
+      <li>
+        <h2>Card Name:{{ card.name }}</h2>
+      </li>
+      <li>
+        <p>Mana Cost:{{ card.manaCost }}</p>
+      </li>
+      <li>
+        <p>Mana Value:{{ card.cmc }}</p>
+      </li>
+      <li>
+        <p>Types:{{ card.types }}</p>
+      </li>
+      <li>
+        <p>Card Text:{{ card.text }}</p>
+      </li>
+      <li>
+        <p>Flavor Text:{{ card.flavor }}</p>
+      </li>
+      <li>
+        <p>Expansion:{{ card.setName }}</p>
+      </li>
+      <li>
+        <p>Rarity:{{ card.rarity }}</p>
+      </li>
+      <li>
+        <p>Card Number:{{ card.number }}</p>
+      </li>
+      <li>
+        <p>Artist:{{ card.artist }}</p>
+      </li>
+    </ul>
+  </div>
+</section>
