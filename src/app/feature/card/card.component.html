@@ -1,3 +1,6 @@
 <li>
+  @if(card){
   <img (click)="sendDetails()" (keydown)="handleKeydown($event)" [src]="card.imageUrl" [alt]="card.name" tabindex="0" />
+  }
+
 </li>
