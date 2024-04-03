@@ -1,12 +1,12 @@
 <div class="paginator">
-  <button (click)="getPage(-1)" [disabled]="currentPage <= 1">
+  <button class="page-down" (click)="getPage(-1)" [disabled]="currentPage < 2">
     <img
       src="../../../assets/paginator/previous.png"
       alt="arrow-left"
       width="65px"
     />
   </button>
-  <button (click)="getPage(1)">
+  <button class="page-up" (click)="getPage(1)">
     <img
       src="../../../assets/paginator/next.png"
       alt="arrow-right"
