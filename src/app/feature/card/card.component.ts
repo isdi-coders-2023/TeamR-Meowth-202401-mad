@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MagicCard } from '../../core/model/model';
 
+
 @Component({
   selector: 'app-card',
   standalone: true,

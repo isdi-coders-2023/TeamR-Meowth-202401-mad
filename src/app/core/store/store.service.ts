@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { RepoService } from '../repo/repo.service';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { MagicCard } from '../model/model';
 
 @Injectable({
@@ -9,6 +9,8 @@ import { MagicCard } from '../model/model';
 export class StoreService {
   private state = new BehaviorSubject<MagicCard[]>([]);
   public state$ = this.state.asObservable();
+  private detailCard = new BehaviorSubject<MagicCard>({} as MagicCard);
+  public detailCard$ = this.detailCard.asObservable();
   currentPage = 1;
   currentColor = '';
   currentType = '';
@@ -25,5 +27,13 @@ export class StoreService {
       this.currentType = type},
       error: (dataError) => console.log('Es un error.' + dataError),
     });
+  }
+
+  selectCard(card:MagicCard) {
+    this.detailCard.next(card);
+  }
+
+  getSelectedCard(): Observable<MagicCard> {
+    return this.detailCard$
   }
 }
