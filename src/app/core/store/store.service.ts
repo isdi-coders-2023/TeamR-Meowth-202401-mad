@@ -49,7 +49,7 @@ export class StoreService {
     this.usernameForm.next(username);
     this.isAuthenticated.next(true);
   }
-  getisAuthenticated(): Observable<boolean> {
+  getIsAuthenticated(): Observable<boolean> {
     return this.isAuthenticated.asObservable();
   }
 }
