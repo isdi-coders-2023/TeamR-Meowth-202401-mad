@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { RepoService } from '../repo/repo.service';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { MagicCard } from '../model/model';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -17,7 +18,7 @@ export class StoreService {
   private usernameForm = new BehaviorSubject<string>('');
   public usernameForm$ = this.state.asObservable();
   private isAuthenticated = new BehaviorSubject<boolean>(false);
-  constructor(private repo: RepoService) {
+  constructor(private repo: RepoService, private router: Router) {
     this.loadData();
   }
 
@@ -33,7 +34,10 @@ export class StoreService {
         this.currentColor = color;
         this.currentType = type;
       },
-      error: (dataError) => console.log('Es un error.' + dataError),
+      error: (dataError) => {
+        this.router.navigate(['/error']);
+        console.log(dataError);
+      },
     });
   }
 
