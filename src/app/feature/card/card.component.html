@@ -1,5 +1,12 @@
 <li>
   @if(card){
-  <img (click)="sendDetails()" (keydown)="handleKeydown($event)" [src]="card.imageUrl" [alt]="card.name" tabindex="0" />
+  <img
+    (click)="sendDetails()"
+    (keydown)="handleKeydown($event)"
+    [src]="card.imageUrl"
+    [alt]="card.name"
+    tabindex="0"
+  />
   }
+  <app-buttons [card]="this.card"></app-buttons>
 </li>
