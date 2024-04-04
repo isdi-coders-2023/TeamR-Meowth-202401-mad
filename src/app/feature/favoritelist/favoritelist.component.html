@@ -1,0 +1,7 @@
+<ul>
+  @for (item of favCards; track item.name) {
+  <li>
+    <app-favoritecard [card]="item"></app-favoritecard>
+  </li>
+  }
+</ul>

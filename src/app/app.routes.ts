@@ -16,15 +16,15 @@ export const routes: Routes = [
     title: 'error',
     loadComponent: () => import('./feature/error/error.component'),
   },
+  {
+    path: 'favorite',
+    title: 'favorite',
+    loadComponent: () => import('./feature/favorite/favorite.component'),
+  },
   { path: '', pathMatch: 'full', redirectTo: 'Home' },
   { path: '**', redirectTo: 'home' },
-  //   {
-  //   path: 'favourites',
-  //   title: 'Favourite'
-  //   loadComponent: () => import ( "./feature/")
-  // },
-  //   {
-  //   path: 'create'
+  // {
+  //  path: 'create'
   //   loadComponent: () => import ( "./feature/")
   // },
 ];
