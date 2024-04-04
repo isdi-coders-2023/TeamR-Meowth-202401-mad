@@ -9,13 +9,20 @@ import { Observable } from 'rxjs';
 export class LocalRepoService {
   urlFavorites = 'http://localhost:3000/cards';
   constructor(private http: HttpClient) {}
+
   getFavorites(): Observable<CardList> {
     return this.http.get<CardList>(this.urlFavorites);
   }
   addFavorites(fav: MagicCard) {
-    this.http.post<MagicCard>(this.urlFavorites, fav);
+    this.http.post<MagicCard>(this.urlFavorites, fav).subscribe({
+      next: (response) => console.log(response),
+      error: (error) => console.log(error),
+    });
   }
   deleteFavorites(id: string) {
-    this.http.delete<MagicCard>(this.urlFavorites + '/' + id);
+    this.http.delete<MagicCard>(this.urlFavorites + '/' + id).subscribe({
+      next: (response) => console.log(response),
+      error: (error) => console.log(error),
+    });
   }
 }
