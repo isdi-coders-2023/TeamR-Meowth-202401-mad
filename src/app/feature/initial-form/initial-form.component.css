@@ -4,10 +4,11 @@ section {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-block: 5rem;
-  padding-block: 4rem;
-  margin-inline: 30rem;
+  padding-bottom: 4rem;
+  margin: 3rem auto;
   padding-top: 2rem;
+  padding-inline: 3rem;
+  width: fit-content;
 }
 form {
   margin-inline: 3rem;
@@ -15,11 +16,15 @@ form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  input {
-    width: 97%;
-  }
   button {
-    margin-inline: 7rem;
-    margin-bottom: 2rem;
+    margin-inline: 3rem;
+    background-color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.4rem;
+    &:hover {
+      background-color: black;
+      color: white;
+    }
   }
 }
