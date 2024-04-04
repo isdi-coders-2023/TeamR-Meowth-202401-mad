@@ -43,6 +43,7 @@ describe('RepoService', () => {
           isFavorite: false,
           types: ['Type1'],
           flavor: 'Flavor text',
+          id: '1',
         },
       ],
     };

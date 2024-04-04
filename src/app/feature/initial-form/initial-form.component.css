@@ -7,7 +7,7 @@ section {
   padding-bottom: 4rem;
   margin: 3rem auto;
   padding-top: 2rem;
-  padding-inline: 3rem;
+  padding-inline: 5rem;
   width: fit-content;
 }
 form {
@@ -17,6 +17,7 @@ form {
   flex-direction: column;
   gap: 0.5rem;
   button {
+    cursor: pointer;
     margin-inline: 3rem;
     background-color: white;
     border: none;

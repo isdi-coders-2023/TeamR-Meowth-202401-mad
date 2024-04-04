@@ -9,7 +9,12 @@ export const routes: Routes = [
   {
     path: 'details',
     title: 'details',
-    loadComponent: () => import ( './feature/details/details.component')
+    loadComponent: () => import('./feature/details/details.component'),
+  },
+  {
+    path: 'error',
+    title: 'error',
+    loadComponent: () => import('./feature/error/error.component'),
   },
   { path: '', pathMatch: 'full', redirectTo: 'Home' },
   { path: '**', redirectTo: 'home' },
@@ -22,5 +27,4 @@ export const routes: Routes = [
   //   path: 'create'
   //   loadComponent: () => import ( "./feature/")
   // },
-
 ];
