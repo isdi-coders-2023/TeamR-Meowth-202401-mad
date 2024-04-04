@@ -16,4 +16,5 @@ export interface MagicCard {
   isFavorite: boolean;
   types: string[];
   flavor: string;
+  id: string;
 }
