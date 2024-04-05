@@ -12,6 +12,7 @@
     width="36px"
     height="36px"
   />
+  @if(card){
   <img
     (click)="sendFavorite()"
     (keydown)="handleKeydown($event)"
@@ -24,5 +25,5 @@
     alt="corazonPartio"
     width="36px"
     height="36px"
-  />
+  />}
 </div>
