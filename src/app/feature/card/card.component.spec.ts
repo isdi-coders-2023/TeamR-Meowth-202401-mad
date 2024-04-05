@@ -12,7 +12,7 @@ describe('CardComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [CardComponent],
-      providers: [provideHttpClient()]
+      providers: [provideHttpClient()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(CardComponent);

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { LocalRepoService } from './local-repo.service';
+import { LocalRepoService } from '../local-repo/local-repo.service';
 import { BehaviorSubject } from 'rxjs';
-import { MagicCard } from './model/model';
+import { MagicCard } from '../model/model';
 
 @Injectable({
   providedIn: 'root',

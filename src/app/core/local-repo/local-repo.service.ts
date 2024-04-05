@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { MagicCard } from './model/model';
+import { MagicCard } from '../model/model';
 import { Observable } from 'rxjs';
 
 @Injectable({

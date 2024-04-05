@@ -7,7 +7,9 @@ describe('LocalRepoService', () => {
   let service: LocalRepoService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({ providers: [provideHttpClient()] });
+    TestBed.configureTestingModule({
+      providers: [provideHttpClient()],
+    });
     service = TestBed.inject(LocalRepoService);
   });
 
