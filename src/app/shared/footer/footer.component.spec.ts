@@ -28,16 +28,20 @@ describe('FooterComponent', () => {
 
   it('should render social links', () => {
     const compiled = fixture.debugElement.nativeElement;
-    const githubLink = compiled.querySelector('a[href="https://github.com/"]');
-    const youtubeLink = compiled.querySelector(
-      'a[href="https://youtube.com/"]'
+    const githubLink = compiled.querySelector(
+      'a[href="https://github.com/alce65"]'
     );
-    const twitchLink = compiled.querySelector('a[href="https://twitch.com/"]');
+    const youtubeLink = compiled.querySelector(
+      'a[href="https://www.youtube.com/c/magicthegathering"]'
+    );
+    const twitchLink = compiled.querySelector(
+      'a[href="https://www.twitch.tv/magic"]'
+    );
     const facebookLink = compiled.querySelector(
-      'a[href="https://facebook.com/"]'
+      'a[href="https://www.facebook.com/MagicTheGathering.es/?locale=es_ES"]'
     );
     const twitterLink = compiled.querySelector(
-      'a[href="https://twitter.com/"]'
+      'a[href="https://twitter.com/wizards_magic?lang=es"]'
     );
     expect(githubLink).toBeTruthy();
     expect(youtubeLink).toBeTruthy();

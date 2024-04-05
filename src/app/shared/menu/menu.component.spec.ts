@@ -26,7 +26,7 @@ describe('MenuComponent', () => {
   it('should have correct links', () => {
     const links = element.querySelectorAll('a');
     expect(links[0].getAttribute('routerLink')).toEqual('/home');
-    expect(links[1].getAttribute('routerLink')).toEqual('/favourites');
+    expect(links[1].getAttribute('routerLink')).toEqual('/favorite');
     expect(links[2].getAttribute('routerLink')).toEqual('/create');
   });
 });
