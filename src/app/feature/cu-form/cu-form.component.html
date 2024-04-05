@@ -1,0 +1,63 @@
+<section>
+  <div class="image">
+    <img src="../../../assets/img/cardtemplate.png" alt="card-template" width="300">
+  </div>
+
+  <form [formGroup]="cuForm" (ngSubmit)="sendNewCard()">
+
+    <label for=""></label>
+    <input type="text">
+
+    <label for="name"><span>Card Name:</span></label>
+    <input type="text" id="name" placeholder="Name" formControlName="name">
+
+    <label for="manaCost"><span>Mana Cost:</span></label>
+    <input type="text" id="manaCost" placeholder="Mana Cost" formControlName="manaCost">
+
+    <label for="cmc"><span>Mana Value:</span></label>
+    <input type="text" id="cmc" placeholder="Mana Value" formControlName="cmc">
+
+    <label for="colors"><span>Color:</span></label>
+    <select name="colors" id="colors" formControlName="colors">
+      <option value="G">Green</option>
+      <option value="R">Red</option>
+      <option value="B">Blue</option>
+      <option value="W">White</option>
+      <option value="B">Black</option>
+    </select>
+
+    <label for="types"><span>Types:</span></label>
+    <select name="types" id="types" formControlName="types">
+      <option value="Artifact">Artifact</option>
+      <option value="Creature">Creature</option>
+      <option value="Enchantment">Enchantment</option>
+      <option value="Planeswalker">Planeswalker</option>
+      <option value="Instant">Instant</option>
+      <option value="Land">Land</option>
+      <option value="Sorcery">Sorcery</option>
+    </select>
+
+    <label for="text"><span>Card Text:</span></label>
+    <input class="textbox" type="text" id="text" placeholder="Text, max. length: 300" formControlName="text"
+      maxlength="300">
+
+    <label for="flavor"><span>Flavor Text:</span></label>
+    <input type="text" id="flavor" placeholder="Motto" formControlName="flavor">
+
+    <label for="setName"><span>Expansion:</span></label>
+    <input type="text" id="setName" placeholder="Expansion" formControlName="setName">
+
+    <label for="rarity"><span>Rarity:</span></label>
+    <select name="rarity" id="rarity" formControlName="rarity">
+      <option value="Common">Common</option>
+      <option value="Uncommon">Uncommon</option>
+      <option value="Rare">Rare</option>
+      <option value="Mythic Rare">Mythic Rare</option>
+    </select>
+
+    <label for="artist"><span>Artist:</span></label>
+    <input type="text" id="artist" placeholder="Your name" formControlName="artist">
+
+    <button type="submit">Create</button>
+  </form>
+</section>

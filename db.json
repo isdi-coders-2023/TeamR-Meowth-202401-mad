@@ -1,3 +1,84 @@
 {
-  "cards": []
+  "cards": [
+    {
+      "id": "61",
+      "name": "asfadfsadff",
+      "manaCost": null,
+      "cmc": null,
+      "colors": null,
+      "rarity": null,
+      "setName": null,
+      "text": null,
+      "artist": null,
+      "imageUrl": null,
+      "types": null,
+      "flavor": null,
+      "number": "61",
+      "isFavorite": true
+    },
+    {
+      "id": "993",
+      "name": "asfadfsadff",
+      "manaCost": null,
+      "cmc": null,
+      "colors": "B",
+      "rarity": "Uncommon",
+      "setName": null,
+      "text": null,
+      "artist": null,
+      "imageUrl": null,
+      "types": "Enchantment",
+      "flavor": null,
+      "number": "993",
+      "isFavorite": true
+    },
+    {
+      "id": "757",
+      "name": "asfadfsadff",
+      "manaCost": null,
+      "cmc": null,
+      "colors": "B",
+      "rarity": "Uncommon",
+      "setName": null,
+      "text": null,
+      "artist": null,
+      "imageUrl": null,
+      "types": "Enchantment",
+      "flavor": null,
+      "number": "757",
+      "isFavorite": true
+    },
+    {
+      "id": "7b7bad3f-791c-4dfb-9155-f625eb3cb5e0",
+      "name": "asdasd",
+      "manaCost": null,
+      "cmc": null,
+      "colors": null,
+      "rarity": null,
+      "setName": null,
+      "text": null,
+      "artist": null,
+      "imageUrl": null,
+      "types": null,
+      "flavor": null,
+      "number": "7b7bad3f-791c-4dfb-9155-f625eb3cb5e0",
+      "isFavorite": true
+    },
+    {
+      "id": "7291bb83-228e-4655-8024-ce22b885f0a9",
+      "name": null,
+      "manaCost": null,
+      "cmc": null,
+      "colors": null,
+      "rarity": null,
+      "setName": null,
+      "text": null,
+      "artist": null,
+      "imageUrl": "../../../assets/img/cardtemplate.png",
+      "types": null,
+      "flavor": null,
+      "number": "7291bb83-228e-4655-8024-ce22b885f0a9",
+      "isFavorite": true
+    }
+  ]
 }
