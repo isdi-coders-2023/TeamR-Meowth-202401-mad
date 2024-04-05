@@ -12,14 +12,13 @@ import { LocalRepoService } from '../../core/local-repo.service';
 export class ButtonsComponent {
   constructor(private rep: LocalRepoService) {}
   @Input() card!: MagicCard;
-
   sendFavorite() {
-    if (this.card.isFavorite === true) {
+    this.card.isFavorite = !this.card.isFavorite;
+    if (!this.card.isFavorite) {
       this.rep.deleteFavorites(this.card.id);
     } else {
       this.rep.addFavorites(this.card);
     }
-    this.card.isFavorite = !this.card.isFavorite;
   }
   handleKeydown(event: KeyboardEvent) {
     if (event.key === 'Enter') {
