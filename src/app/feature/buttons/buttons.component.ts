@@ -25,4 +25,12 @@ export class ButtonsComponent {
       this.sendFavorite();
     }
   }
+  deleteCard() {
+    this.rep.deleteFavorites(this.card.id);
+  }
+  keydownDelete(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.deleteCard();
+    }
+  }
 }

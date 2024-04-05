@@ -22,9 +22,15 @@ export const routes: Routes = [
     loadComponent: () => import('./feature/favorite/favorite.component'),
   },
   {
-  path: 'create',
-  title: 'create',
-    loadComponent: () => import ( "./feature/createcard/createcard.component")
+    path: 'create',
+    title: 'create',
+    loadComponent: () => import('./feature/createcard/createcard.component'),
+  },
+  {
+    path: 'edit',
+    title: 'edit',
+    loadComponent: () =>
+      import('./feature/editcard/editcard/editcard.component'),
   },
   { path: '', pathMatch: 'full', redirectTo: 'Home' },
   { path: '**', redirectTo: 'home' },

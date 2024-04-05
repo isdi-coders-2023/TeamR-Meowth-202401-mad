@@ -1,0 +1,8 @@
+.homeCrud {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.corazonPartio {
+  cursor: pointer;
+}

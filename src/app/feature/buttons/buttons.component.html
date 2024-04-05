@@ -1,18 +1,22 @@
 <div class="buttonCrud">
+  @if(card){
   <img
+    class="corazonPartio"
+    (click)="deleteCard()"
+    (keydown)="keydownDelete($event)"
+    tabindex="0"
     src="../../../assets/icons/borrar.png"
     alt="borrar"
     width="36px"
     height="36px"
-  />
-
-  <img
+  />} @if(card){<img
+    class="corazonPartio"
     src="../../../assets/icons/editar.png"
     alt="editar"
     width="36px"
     height="36px"
-  />
-  @if(card){
+    routerLink="/edit"
+  />} @if(card){
   <img
     class="corazonPartio"
     (click)="sendFavorite()"
