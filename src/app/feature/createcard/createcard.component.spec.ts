@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CreatecardComponent } from './createcard.component';
+import CreatecardComponent from './createcard.component';
 
 describe('CreatecardComponent', () => {
   let component: CreatecardComponent;
@@ -8,9 +8,8 @@ describe('CreatecardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CreatecardComponent]
-    })
-    .compileComponents();
+      imports: [CreatecardComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CreatecardComponent);
     component = fixture.componentInstance;
