@@ -22,4 +22,20 @@ describe('ErrorComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should render app-header and app-menu', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('app-header')).not.toBeNull();
+    expect(
+      compiled.querySelector('app-header').querySelector('app-menu')
+    ).not.toBeNull();
+  });
+  it('should display the error message and image', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    const img = compiled.querySelector('section > img');
+    expect(img.src).toContain('error-image.jpeg');
+    expect(compiled.querySelector('h2').textContent).toContain('ERROR');
+    expect(compiled.querySelector('p').textContent).toContain(
+      "WE CAN'T FIND YOUR MANA"
+    );
+  });
 });

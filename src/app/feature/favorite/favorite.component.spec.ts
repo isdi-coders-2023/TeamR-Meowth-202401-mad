@@ -23,4 +23,9 @@ describe('FavoriteComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should render header and menu components', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('app-header')).not.toBeNull();
+    expect(compiled.querySelector('app-menu')).not.toBeNull();
+  });
 });

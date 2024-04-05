@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MagicCard } from '../../core/model/model';
-import { LocalRepoService } from '../../core/local-repo.service';
+import { LocalRepoService } from '../../core/local-repo/local-repo.service';
 
 @Component({
   selector: 'app-buttons',

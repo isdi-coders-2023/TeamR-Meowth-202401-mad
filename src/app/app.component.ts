@@ -8,7 +8,6 @@ import DetailsComponent from './feature/details/details.component';
 import { InitialFormComponent } from './feature/initial-form/initial-form.component';
 import { StoreService } from './core/store/store.service';
 
-
 @Component({
   selector: 'app-root',
   standalone: true,
