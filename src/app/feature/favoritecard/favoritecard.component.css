@@ -1,0 +1,8 @@
+.favcard {
+  width: 223px;
+}
+
+li {
+  box-sizing: content-box;
+  padding: 5px;
+}
