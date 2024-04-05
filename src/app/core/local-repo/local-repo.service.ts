@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { CardList, MagicCard } from './model/model';
+import { MagicCard } from '../model/model';
 import { BehaviorSubject, Observable } from 'rxjs';
+
+
 
 @Injectable({
   providedIn: 'root',
@@ -12,8 +14,8 @@ export class LocalRepoService {
   public newCard$ = this.newCard.asObservable();
   constructor(private http: HttpClient) {}
 
-  getFavorites(): Observable<CardList> {
-    return this.http.get<CardList>(this.urlFavorites);
+  getFavorites(): Observable<MagicCard[]> {
+    return this.http.get<MagicCard[]>(this.urlFavorites);
   }
   addFavorites(fav: MagicCard) {
     this.http.post<MagicCard>(this.urlFavorites, fav).subscribe({

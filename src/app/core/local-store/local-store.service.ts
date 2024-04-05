@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { LocalRepoService } from './local-repo.service';
+import { LocalRepoService } from '../local-repo/local-repo.service';
 import { BehaviorSubject } from 'rxjs';
-import { MagicCard } from './model/model';
+import { MagicCard } from '../model/model';
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +15,7 @@ export class LocalStoreService {
 
   loadFavorites() {
     this.repo.getFavorites().subscribe({
-      next: (data) => this.state.next(data.cards),
+      next: (data) => this.state.next(data),
       error: (dataError) => console.log('Es un error' + dataError),
     });
   }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LocalStoreService } from '../../core/local-store.service';
+import { LocalStoreService } from '../../core/local-store/local-store.service';
 import { MagicCard } from '../../core/model/model';
 import { FavoritecardComponent } from '../favoritecard/favoritecard.component';
 

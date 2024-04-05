@@ -11,7 +11,7 @@ describe('CuFormComponent', () => {
       imports: [CuFormComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(CuFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
