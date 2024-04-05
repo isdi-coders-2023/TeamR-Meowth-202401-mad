@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CuFormComponent } from './cu-form.component';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('CuFormComponent', () => {
   let component: CuFormComponent;
@@ -8,9 +9,9 @@ describe('CuFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CuFormComponent]
-    })
-    .compileComponents();
+      imports: [CuFormComponent],
+      providers: [provideHttpClient()],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CuFormComponent);
     component = fixture.componentInstance;

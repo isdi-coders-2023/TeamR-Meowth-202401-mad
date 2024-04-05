@@ -31,7 +31,7 @@ describe('FavoritecardComponent', () => {
     } as MagicCard;
     component.card = testCard;
     fixture.detectChanges();
-    const image = fixture.debugElement.query(By.css('li img')).nativeElement;
+    const image = fixture.debugElement.query(By.css('img')).nativeElement;
     expect(image.src).toEqual(testCard.imageUrl);
     expect(image.alt).toEqual(testCard.name);
   });
