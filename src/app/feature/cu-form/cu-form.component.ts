@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { LocalRepoService } from '../../core/local-repo.service';
+import { LocalRepoService } from '../../core/local-repo/local-repo.service';
 import { MagicCard } from '../../core/model/model';
 
 @Component({
