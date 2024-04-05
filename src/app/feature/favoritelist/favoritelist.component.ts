@@ -17,8 +17,6 @@ export class FavoritelistComponent {
   }
 
   loadCards() {
-    this.serv.state$.subscribe((item) => {
-      this.favCards = item;
-    });
+    this.serv.state$.subscribe((item) => (this.favCards = item));
   }
 }
