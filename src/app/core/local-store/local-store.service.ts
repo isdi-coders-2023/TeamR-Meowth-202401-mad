@@ -15,7 +15,7 @@ export class LocalStoreService {
 
   loadFavorites() {
     this.repo.getFavorites().subscribe({
-      next: (data) => this.state.next(data.cards),
+      next: (data) => this.state.next(data),
       error: (dataError) => console.log('Es un error' + dataError),
     });
   }
