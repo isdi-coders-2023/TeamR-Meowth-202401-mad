@@ -4,6 +4,8 @@ import { CardComponent } from './card.component';
 import { MagicCard } from '../../core/model/model';
 import { By } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
+import { routes } from '../../app.routes';
 
 describe('CardComponent', () => {
   let component: CardComponent;
@@ -12,7 +14,7 @@ describe('CardComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [CardComponent],
-      providers: [provideHttpClient()],
+      providers: [provideHttpClient(), provideRouter(routes)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(CardComponent);

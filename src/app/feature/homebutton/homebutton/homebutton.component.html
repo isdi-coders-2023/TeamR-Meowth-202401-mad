@@ -1,0 +1,24 @@
+<div class="homeButton">
+  @if(card){<img
+    class="corazonPartio"
+    src="../../../assets/icons/editar.png"
+    alt="editar"
+    width="36px"
+    height="36px"
+    routerLink="/edit"
+  />} @if(card){
+  <img
+    class="corazonPartio"
+    (click)="sendFavorite()"
+    (keydown)="handleKeydown($event)"
+    tabindex="0"
+    [src]="
+      !card.isFavorite
+        ? '../../../assets/icons/corazon.png'
+        : '../../../assets/icons/corazonrelleno.png'
+    "
+    alt="corazonPartio"
+    width="36px"
+    height="36px"
+  />}
+</div>

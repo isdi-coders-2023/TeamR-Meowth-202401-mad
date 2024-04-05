@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CuFormComponent } from './cu-form.component';
+import { HomebuttonComponent } from './homebutton.component';
 import { provideHttpClient } from '@angular/common/http';
 
-describe('CuFormComponent', () => {
-  let component: CuFormComponent;
-  let fixture: ComponentFixture<CuFormComponent>;
+describe('HomebuttonComponent', () => {
+  let component: HomebuttonComponent;
+  let fixture: ComponentFixture<HomebuttonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CuFormComponent],
+      imports: [HomebuttonComponent],
       providers: [provideHttpClient()],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(CuFormComponent);
+    fixture = TestBed.createComponent(HomebuttonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
