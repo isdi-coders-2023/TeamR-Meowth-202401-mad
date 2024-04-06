@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { StoreService } from '../../core/store/store.service';
 
 @Component({
@@ -14,7 +19,7 @@ export class InitialFormComponent {
     email: new FormControl(),
     password: new FormControl(),
     repeatpassword: new FormControl(),
-    username: new FormControl(),
+    username: new FormControl('', Validators.required),
   });
 
   displayWeb: boolean = false;

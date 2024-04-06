@@ -15,8 +15,8 @@ export class StoreService {
   currentPage = 1;
   currentColor = '';
   currentType = '';
-  private usernameForm = new BehaviorSubject<string>('');
-  public usernameForm$ = this.state.asObservable();
+  private usernameForm = new BehaviorSubject<string>('Freak');
+  public usernameForm$ = this.usernameForm.asObservable();
   private isAuthenticated = new BehaviorSubject<boolean>(false);
   constructor(private repo: RepoService, private router: Router) {
     this.loadData();
@@ -55,5 +55,9 @@ export class StoreService {
   }
   getIsAuthenticated(): Observable<boolean> {
     return this.isAuthenticated.asObservable();
+  }
+  changeUsername(username: string) {
+    this.usernameForm.next(username);
+    this.isAuthenticated.next(true);
   }
 }

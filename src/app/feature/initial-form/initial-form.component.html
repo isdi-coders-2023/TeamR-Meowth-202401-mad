@@ -27,7 +27,6 @@
     <label>
       <input type="text" placeholder="username" formControlName="username" />
     </label>
-
-    <button type="submit">Entry</button>
+    <button type="submit" [disabled]="form.invalid">Entry</button>
   </form>
 </section>

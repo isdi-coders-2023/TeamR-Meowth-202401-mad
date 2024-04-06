@@ -40,6 +40,6 @@ describe('InitialFormComponent', () => {
   });
 
   it('form invalid when empty', () => {
-    expect(component.form.invalid).toBeFalsy();
+    expect(component.form.invalid).toBeTruthy();
   });
 });

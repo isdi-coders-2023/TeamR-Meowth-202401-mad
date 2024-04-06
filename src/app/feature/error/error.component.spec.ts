@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import ErrorComponent from './error.component';
 import { provideRouter } from '@angular/router';
 import { routes } from '../../app.routes';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('ErrorComponent', () => {
   let component: ErrorComponent;
@@ -11,7 +12,7 @@ describe('ErrorComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ErrorComponent],
-      providers: [provideRouter(routes)],
+      providers: [provideRouter(routes), provideHttpClient()],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ErrorComponent);
@@ -34,7 +35,7 @@ describe('ErrorComponent', () => {
     const img = compiled.querySelector('section > img');
     expect(img.src).toContain('error-image.jpeg');
     expect(compiled.querySelector('h2').textContent).toContain('ERROR');
-    expect(compiled.querySelector('p').textContent).toContain(
+    expect(compiled.querySelector('.error').textContent).toContain(
       "WE CAN'T FIND YOUR MANA"
     );
   });
