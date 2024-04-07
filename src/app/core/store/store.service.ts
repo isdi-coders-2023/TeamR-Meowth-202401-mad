@@ -12,6 +12,8 @@ export class StoreService {
   public state$ = this.state.asObservable();
   private detailCard = new BehaviorSubject<MagicCard>({} as MagicCard);
   public detailCard$ = this.detailCard.asObservable();
+  private editCard = new BehaviorSubject<MagicCard>({} as MagicCard);
+  public editCard$ = this.editCard.asObservable();
   currentPage = 1;
   currentColor = '';
   currentType = '';
@@ -47,6 +49,14 @@ export class StoreService {
 
   getSelectedCard(): Observable<MagicCard> {
     return this.detailCard$;
+  }
+
+  getEditCard(card: MagicCard) {
+    this.editCard.next(card);
+  }
+
+  shareEditCard(): Observable<MagicCard> {
+    return this.editCard$;
   }
 
   getUsername(username: string) {

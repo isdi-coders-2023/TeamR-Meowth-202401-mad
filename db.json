@@ -1,3 +1,20 @@
 {
-  "cards": []
+  "cards": [
+    {
+      "id": "8a884bf7-52b6-4474-baa6-c8262ecbf68c",
+      "name": null,
+      "manaCost": null,
+      "cmc": null,
+      "colors": null,
+      "rarity": null,
+      "setName": null,
+      "text": null,
+      "artist": null,
+      "imageUrl": "../../../assets/img/cardtemplate.png",
+      "types": null,
+      "flavor": null,
+      "number": "8a884bf7-52b6-4474-baa6-c8262ecbf68c",
+      "isFavorite": true
+    }
+  ]
 }
