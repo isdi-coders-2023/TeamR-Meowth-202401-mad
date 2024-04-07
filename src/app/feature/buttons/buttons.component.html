@@ -11,6 +11,9 @@
     height="36px"
   />} @if(card){<img
     class="corazonPartio"
+    (click)="sendEditCard()"
+    (keydown)="keydownEdit($event)"
+    tabindex="0"
     src="../../../assets/icons/editar.png"
     alt="editar"
     width="36px"

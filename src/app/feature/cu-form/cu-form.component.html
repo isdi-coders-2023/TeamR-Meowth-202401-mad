@@ -1,21 +1,23 @@
 <section>
-  <div class="image">
-    <img src="../../../assets/img/cardtemplate.png" alt="card-template" width="300">
-  </div>
-
   <form [formGroup]="cuForm" (ngSubmit)="sendNewCard()">
-
-    <label for=""></label>
-    <input type="text">
-
     <label for="name"><span>Card Name:</span></label>
-    <input type="text" id="name" placeholder="Name" formControlName="name">
+    <input type="text" id="name" placeholder="Name" formControlName="name" />
 
     <label for="manaCost"><span>Mana Cost:</span></label>
-    <input type="text" id="manaCost" placeholder="Mana Cost" formControlName="manaCost">
+    <input
+      type="text"
+      id="manaCost"
+      placeholder="Mana Cost"
+      formControlName="manaCost"
+    />
 
     <label for="cmc"><span>Mana Value:</span></label>
-    <input type="text" id="cmc" placeholder="Mana Value" formControlName="cmc">
+    <input
+      type="text"
+      id="cmc"
+      placeholder="Mana Value"
+      formControlName="cmc"
+    />
 
     <label for="colors"><span>Color:</span></label>
     <select name="colors" id="colors" formControlName="colors">
@@ -38,14 +40,30 @@
     </select>
 
     <label for="text"><span>Card Text:</span></label>
-    <input class="textbox" type="text" id="text" placeholder="Text, max. length: 300" formControlName="text"
-      maxlength="300">
+    <input
+      class="textbox"
+      type="text"
+      id="text"
+      placeholder="Text, max. length: 300"
+      formControlName="text"
+      maxlength="300"
+    />
 
     <label for="flavor"><span>Flavor Text:</span></label>
-    <input type="text" id="flavor" placeholder="Motto" formControlName="flavor">
+    <input
+      type="text"
+      id="flavor"
+      placeholder="Motto"
+      formControlName="flavor"
+    />
 
     <label for="setName"><span>Expansion:</span></label>
-    <input type="text" id="setName" placeholder="Expansion" formControlName="setName">
+    <input
+      type="text"
+      id="setName"
+      placeholder="Expansion"
+      formControlName="setName"
+    />
 
     <label for="rarity"><span>Rarity:</span></label>
     <select name="rarity" id="rarity" formControlName="rarity">
@@ -56,7 +74,12 @@
     </select>
 
     <label for="artist"><span>Artist:</span></label>
-    <input type="text" id="artist" placeholder="Your name" formControlName="artist">
+    <input
+      type="text"
+      id="artist"
+      placeholder="Your name"
+      formControlName="artist"
+    />
 
     <button type="submit">Create</button>
   </form>

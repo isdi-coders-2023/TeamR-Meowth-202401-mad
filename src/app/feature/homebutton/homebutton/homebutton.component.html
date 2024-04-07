@@ -1,6 +1,9 @@
 <div class="homeButton">
   @if(card){<img
     class="corazonPartio"
+    (click)="sendEdit()"
+    (keydown)="handleKeydownEdit($event)"
+    tabindex="0"
     src="../../../assets/icons/editar.png"
     alt="editar"
     width="36px"

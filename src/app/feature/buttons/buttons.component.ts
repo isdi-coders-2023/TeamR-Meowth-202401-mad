@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MagicCard } from '../../core/model/model';
 import { LocalRepoService } from '../../core/local-repo/local-repo.service';
+import { StoreService } from '../../core/store/store.service';
 
 @Component({
   selector: 'app-buttons',
@@ -10,7 +11,7 @@ import { LocalRepoService } from '../../core/local-repo/local-repo.service';
   styleUrl: './buttons.component.css',
 })
 export class ButtonsComponent {
-  constructor(private rep: LocalRepoService) {}
+  constructor(private rep: LocalRepoService, private store: StoreService) {}
   @Input() card!: MagicCard;
   sendFavorite() {
     this.card.isFavorite = !this.card.isFavorite;
@@ -31,6 +32,14 @@ export class ButtonsComponent {
   keydownDelete(event: KeyboardEvent) {
     if (event.key === 'Enter') {
       this.deleteCard();
+    }
+  }
+  sendEditCard() {
+    this.store.getEditCard(this.card);
+  }
+  keydownEdit(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.sendEditCard();
     }
   }
 }

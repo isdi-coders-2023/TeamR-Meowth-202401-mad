@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { LocalRepoService } from '../../../core/local-repo/local-repo.service';
 import { MagicCard } from '../../../core/model/model';
 import { RouterLink } from '@angular/router';
+import { StoreService } from '../../../core/store/store.service';
 
 @Component({
   selector: 'app-homebutton',
@@ -11,7 +12,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './homebutton.component.css',
 })
 export class HomebuttonComponent {
-  constructor(private rep: LocalRepoService) {}
+  constructor(private rep: LocalRepoService, private store: StoreService) {}
   @Input() card!: MagicCard;
   sendFavorite() {
     this.card.isFavorite = !this.card.isFavorite;
@@ -24,6 +25,14 @@ export class HomebuttonComponent {
   handleKeydown(event: KeyboardEvent) {
     if (event.key === 'Enter') {
       this.sendFavorite();
+    }
+  }
+  sendEdit() {
+    this.store.getEditCard(this.card);
+  }
+  handleKeydownEdit(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.sendEdit();
     }
   }
 }
