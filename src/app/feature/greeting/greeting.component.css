@@ -4,3 +4,9 @@ p {
   left: 36rem;
   top: 3rem;
 }
+
+@media (width <= 1000px) {
+  p {
+    visibility: hidden;
+  }
+}
