@@ -1,0 +1,9 @@
+section {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: space-evenly;
+}
+img {
+  padding-top: 2rem;
+}

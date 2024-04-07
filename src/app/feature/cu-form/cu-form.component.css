@@ -12,9 +12,7 @@ div {
 form {
   display: flex;
   flex-direction: column;
-
 }
-
 
 .textbox {
   width: 400px;
